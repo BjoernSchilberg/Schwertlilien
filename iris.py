@@ -26,7 +26,7 @@ Y=iris.target
 #bedeutet, dass das Modell die 15 nächsten Nachbarn jeder Beobachtung betrachten
 #wird, um die Klassifizierung vorzunehmen.
 
-clf= neighbors.KNeighborsClassifier(n_neighbors=3)
+clf= neighbors.KNeighborsClassifier(n_neighbors=15)
 
 
 # Training des Modells
