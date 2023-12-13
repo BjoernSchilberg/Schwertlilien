@@ -4,12 +4,12 @@
   - [Am Beispiel des Iris Datensatz](#am-beispiel-des-iris-datensatz)
     - [Merkmale des Iris-Datensatzes](#merkmale-des-iris-datensatzes)
     - [Warum eignet sich der Datensatz gut?](#warum-eignet-sich-der-datensatz-gut)
-  - [Automatische Datenanalyse mittels Orange3](#automatische-datenanalyse-mittels-orange3)
-    - [kNN (k-Nächste-Nachbarn-Modell)](#knn-k-nächste-nachbarn-modell)
-  - [Automatische Datenanalyse mittels Python](#automatische-datenanalyse-mittels-python)
-    - [Mittels scikit-learn und Nearest Neighbors Classification (KNeighborsClassifier)](#mittels-scikit-learn-und-nearest-neighbors-classification-kneighborsclassifier)
-      - [Benötigte Biblotheken installieren](#benötigte-biblotheken-installieren)
-    - [Ausführen](#ausführen)
+  - [kNN (k-Nächste-Nachbarn-Modell)](#knn-k-nächste-nachbarn-modell)
+    - [Automatische Datenanalyse mittels Orange3 (kNN)](#automatische-datenanalyse-mittels-orange3-knn)
+    - [Automatische Datenanalyse mittels Python](#automatische-datenanalyse-mittels-python)
+  - [Random Forest](#random-forest)
+    - [Automatische Datenanalyse mittels Orange3 (Random Forest)](#automatische-datenanalyse-mittels-orange3-random-forest)
+    - [Automatische Datenanalyse mittels Python (kNN)](#automatische-datenanalyse-mittels-python-knn)
   - [Link-Halde](#link-halde)
 
 ## Am Beispiel des Iris Datensatz
@@ -38,41 +38,61 @@ Datensätze vor.
 - Verständlichkeit: Leicht zu visualisieren, da die Merkmale klare biologische Bedeutungen haben.
 - Standard-Beispiel: Häufig in Lehrmaterialien verwendet, was den Zugang zu zusätzlichen Ressourcen erleichtert.
 
-## Automatische Datenanalyse mittels Orange3
-
-### kNN (k-Nächste-Nachbarn-Modell)
+## kNN (k-Nächste-Nachbarn-Modell)
 
 Das k-Nächste-Nachbarn-Modell entscheidet auf Basis der Zielmerkmale der
 Datenpunkte mit den ähnlichsten Merkmalsausprägungen (die nächsten Nachbarn)
 
 - Einstieg: [Biberaufgabe 2020: Neues Haus](neues_haus.pdf)
+
+### Automatische Datenanalyse mittels Orange3 (kNN)
+
 - <https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/model/knn.html>
 - [Orange3 Hilfekarte (pdf)](orange3_hilfekarte_knn.pdf)
-  
+
 ![Automatische Datenanalyse mittels Orange3 und kNN](orange3_iris_knn.png)
 
-## Automatische Datenanalyse mittels Python
+### Automatische Datenanalyse mittels Python
 
-### Mittels scikit-learn und Nearest Neighbors Classification (KNeighborsClassifier)
+Mittels scikit-learn und Nearest Neighbors Classification (KNeighborsClassifier)
 
 - <https://scikit-learn.org/stable/modules/neighbors.html#classification>
 - <https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html#sklearn.neighbors.KNeighborsClassifier>
 
-#### Benötigte Biblotheken installieren
+Benötigte Biblotheken installieren
 
 ```shell
 pip install matplotlib seaborn scikit-learn numpy
 ```
 
-### Ausführen
+Ausführen
 
 ```python
-python iris.py
+python knn.py
 ```
 
 k=3             |  k=15
 :-------------------------:|:-------------------------:
 ![Automatische Datenanalyse mittels Python und kNN: K=3 ](knn_3.png) | ![Automatische Datenanalyse mittels Python und kNN: K=15 ](knn_15.png)
+
+## Random Forest
+
+Random Forest Modelle enthalten mehrere Entscheidungsbäume und stimmen im
+Mehrheitsverfahren ab.
+
+### Automatische Datenanalyse mittels Orange3 (Random Forest)
+
+- Einstieg: <https://www.youtube.com/watch?v=gSQsFIMcA8A>
+- <https://orangedatamining.com/blog/pythagorean-trees-and-forests/>
+- [Orange3 Hilfekarte (pdf)](orange3_hilfekarte_random_forest.pdf)
+
+![Automatische Datenanalyse mittels Orange3 und Random Forest](orange3_iris_random_forest.png)
+
+### Automatische Datenanalyse mittels Python (kNN)
+
+```python
+python rf.py
+```
 
 ## Link-Halde
 
