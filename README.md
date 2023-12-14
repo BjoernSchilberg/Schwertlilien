@@ -1,6 +1,6 @@
-# Automatische Datenanalyse
+# Automatische Datenanalyse mit Orange3 und Python
 
-- [Automatische Datenanalyse](#automatische-datenanalyse)
+- [Automatische Datenanalyse mit Orange3 und Python](#automatische-datenanalyse-mit-orange3-und-python)
   - [Am Beispiel des Iris Datensatz](#am-beispiel-des-iris-datensatz)
     - [Merkmale des Iris-Datensatzes](#merkmale-des-iris-datensatzes)
     - [Warum eignet sich der Datensatz gut?](#warum-eignet-sich-der-datensatz-gut)
