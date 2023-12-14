@@ -5,11 +5,14 @@
     - [Merkmale des Iris-Datensatzes](#merkmale-des-iris-datensatzes)
     - [Warum eignet sich der Datensatz gut?](#warum-eignet-sich-der-datensatz-gut)
   - [kNN (k-Nächste-Nachbarn-Modell)](#knn-k-nächste-nachbarn-modell)
+    - [Einstieg (kNN)](#einstieg-knn)
     - [Automatische Datenanalyse mittels Orange3 (kNN)](#automatische-datenanalyse-mittels-orange3-knn)
     - [Automatische Datenanalyse mittels Python](#automatische-datenanalyse-mittels-python)
   - [Random Forest](#random-forest)
+    - [Einstieg (Random Forest)](#einstieg-random-forest)
+      - [Beispiele](#beispiele)
     - [Automatische Datenanalyse mittels Orange3 (Random Forest)](#automatische-datenanalyse-mittels-orange3-random-forest)
-    - [Automatische Datenanalyse mittels Python (kNN)](#automatische-datenanalyse-mittels-python-knn)
+    - [Automatische Datenanalyse mittels Python (Random Forest)](#automatische-datenanalyse-mittels-python-random-forest)
   - [Link-Halde](#link-halde)
 
 ## Am Beispiel des Iris Datensatz
@@ -40,15 +43,18 @@ Datensätze vor.
 
 ## kNN (k-Nächste-Nachbarn-Modell)
 
+### Einstieg (kNN)
+
 Das k-Nächste-Nachbarn-Modell entscheidet auf Basis der Zielmerkmale der
 Datenpunkte mit den ähnlichsten Merkmalsausprägungen (die nächsten Nachbarn)
 
-- Einstieg: [Biberaufgabe 2020: Neues Haus](neues_haus.pdf)
+- [Biberaufgabe 2020: Neues Haus](neues_haus.pdf)
 
 ### Automatische Datenanalyse mittels Orange3 (kNN)
 
 - <https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/model/knn.html>
-- [Orange3 Hilfekarte (pdf)](orange3_hilfekarte_knn.pdf)
+- [Orange3 Hilfekarte kNN (pdf)](orange3_hilfekarte_knn.pdf)
+- Orange3 Projektdatei: [orange3_iris_knn.ows](orange3_iris_knn.ows)
 
 ![Automatische Datenanalyse mittels Orange3 und kNN](orange3_iris_knn.png)
 
@@ -77,21 +83,48 @@ k=3             |  k=15
 
 ## Random Forest
 
+### Einstieg (Random Forest)
+
 Random Forest Modelle enthalten mehrere Entscheidungsbäume und stimmen im
 Mehrheitsverfahren ab.
+
+#### Beispiele
+
+Spotify:
+
+- <https://schuster-j.github.io/spotify-machinelearning/#optimierung-4>
+
+Aktien:
+
+- <https://thedlf.de/warum-kuenstliche-intelligenz-ki-keine-aktienprognosen-kann/>
+- <https://www.youtube.com/watch?app=desktop&v=MItd570HlLc>
+- <https://www.sciencedirect.com/science/article/pii/S2405844019359705#sec4>
+
+computergestütze Biologie:
+
+- <https://support.minitab.com/de-de/minitab/21/help-and-how-to/statistical-modeling/predictive-analytics/how-to/random-forests-classification/before-you-start/example/>
 
 ### Automatische Datenanalyse mittels Orange3 (Random Forest)
 
 - Einstieg: <https://www.youtube.com/watch?v=gSQsFIMcA8A>
 - <https://orangedatamining.com/blog/pythagorean-trees-and-forests/>
-- [Orange3 Hilfekarte (pdf)](orange3_hilfekarte_random_forest.pdf)
+- [Orange3 Hilfekarte Random Forest (pdf)](orange3_hilfekarte_random_forest.pdf)
+- Orange3 Projektdatei: [orange3_iris_random_forest.ows](orange3_iris_random_forest.ows)
 
 ![Automatische Datenanalyse mittels Orange3 und Random Forest](orange3_iris_random_forest.png)
 
-### Automatische Datenanalyse mittels Python (kNN)
+### Automatische Datenanalyse mittels Python (Random Forest)
 
-```python
+Erstellung eines Random Forest mit 3 Bäumen und Speicherung der 3 Bäumen als png-Dateien.
+
+```shell
 python rf.py
+```
+
+Erstellung des Klassifikationsberichts.
+
+```shell
+python rf_report.py
 ```
 
 ## Link-Halde
